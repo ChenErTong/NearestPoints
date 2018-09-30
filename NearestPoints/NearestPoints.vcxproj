@@ -60,7 +60,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -115,6 +115,8 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NearestPoints.cpp" />
+    <ClCompile Include="NearestPointsAlgorithm.cpp" />
+    <ClCompile Include="RandomPoints.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NearestPoints.h" />
@@ -124,6 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NearestPoints.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NearestPointsAlgorithm.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="RandomPoints.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

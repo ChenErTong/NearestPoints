@@ -12,9 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,28 +19,16 @@ QT_BEGIN_NAMESPACE
 class Ui_NearestPointsClass
 {
 public:
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
     QWidget *centralWidget;
-    QStatusBar *statusBar;
 
     void setupUi(QMainWindow *NearestPointsClass)
     {
         if (NearestPointsClass->objectName().isEmpty())
             NearestPointsClass->setObjectName(QStringLiteral("NearestPointsClass"));
-        NearestPointsClass->resize(600, 400);
-        menuBar = new QMenuBar(NearestPointsClass);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        NearestPointsClass->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(NearestPointsClass);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        NearestPointsClass->addToolBar(mainToolBar);
+        NearestPointsClass->resize(661, 400);
         centralWidget = new QWidget(NearestPointsClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         NearestPointsClass->setCentralWidget(centralWidget);
-        statusBar = new QStatusBar(NearestPointsClass);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        NearestPointsClass->setStatusBar(statusBar);
 
         retranslateUi(NearestPointsClass);
 
